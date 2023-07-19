@@ -28,7 +28,7 @@ class Day {
 
         this.check = function () {
             
-            const div = document.createElement('div')
+            const main = document.createElement('main')
 
             const h1 = document.createElement('h1')
             const dayNode = document.createTextNode(`${this.formattedDate}`)
@@ -126,11 +126,12 @@ class Day {
             bigSection.appendChild(smallSection8)
             bigSection.appendChild(smallSection9)
 
-            div.appendChild(h1)
-            div.appendChild(bigSection)
+            main.appendChild(h1)
+            main.appendChild(bigSection)
 
-            const element = document.getElementById('main');
-            element.appendChild(div);
+            const body = document.querySelector('body');
+            const footer = document.querySelector('footer')
+            body.insertBefore(main, footer);
 
             if (this.item1) {
                 document.querySelector(`#d${day}-item1`).classList.add('green')
