@@ -7,12 +7,12 @@ class Day {
 
         this.dayNumber = day,
         this.dayUnixTime = day * 86400 + 1689566400,
-        this.fullDate = new Date(this.dayUnixTime * 1000)
-        this.dayOfWeek = weekday[this.fullDate.getDay()]
-        this.month = this.fullDate.getMonth()
-        this.day = this.fullDate.getDate()
-        this.year = this.fullDate.getFullYear()
-        this.formattedDate = `${this.dayOfWeek} ${this.month}/${this.day}/${this.year}`
+        this.fullDate = new Date(this.dayUnixTime * 1000),
+        this.dayOfWeek = weekday[this.fullDate.getDay()],
+        this.month = this.fullDate.getMonth() + 1,
+        this.day = this.fullDate.getDate(),
+        this.year = this.fullDate.getFullYear(),
+        this.formattedDate = `${this.dayOfWeek} ${this.month}/${this.day}/${this.year}`,
         
         this.item1 = item1,
         this.item2 = item2,
@@ -28,7 +28,7 @@ class Day {
 
         this.check = function () {
             
-            const main = document.createElement('main')
+            const div = document.createElement('div')
 
             const h1 = document.createElement('h1')
             const dayNode = document.createTextNode(`${this.formattedDate}`)
@@ -106,85 +106,84 @@ class Day {
             span8.appendChild(node8);
             span9.appendChild(node9);
 
-            smallSection1.appendChild(span1)
-            smallSection2.appendChild(span2)
-            smallSection3.appendChild(span3)
-            smallSection4.appendChild(span4)
-            smallSection5.appendChild(span5)
-            smallSection6.appendChild(span6)
-            smallSection7.appendChild(span7)
-            smallSection8.appendChild(span8)
-            smallSection9.appendChild(span9)
+            smallSection1.appendChild(span1);
+            smallSection2.appendChild(span2);
+            smallSection3.appendChild(span3);
+            smallSection4.appendChild(span4);
+            smallSection5.appendChild(span5);
+            smallSection6.appendChild(span6);
+            smallSection7.appendChild(span7);
+            smallSection8.appendChild(span8);
+            smallSection9.appendChild(span9);
 
-            bigSection.appendChild(smallSection1)
-            bigSection.appendChild(smallSection2)
-            bigSection.appendChild(smallSection3)
-            bigSection.appendChild(smallSection4)
-            bigSection.appendChild(smallSection5)
-            bigSection.appendChild(smallSection6)
-            bigSection.appendChild(smallSection7)
-            bigSection.appendChild(smallSection8)
-            bigSection.appendChild(smallSection9)
+            bigSection.appendChild(smallSection1);
+            bigSection.appendChild(smallSection2);
+            bigSection.appendChild(smallSection3);
+            bigSection.appendChild(smallSection4);
+            bigSection.appendChild(smallSection5);
+            bigSection.appendChild(smallSection6);
+            bigSection.appendChild(smallSection7);
+            bigSection.appendChild(smallSection8);
+            bigSection.appendChild(smallSection9);
 
-            main.appendChild(h1)
-            main.appendChild(bigSection)
+            div.appendChild(h1);;
+            div.appendChild(bigSection);;
 
-            const body = document.querySelector('body');
-            const footer = document.querySelector('footer')
-            body.insertBefore(main, footer);
+            const element = document.querySelector('main');
+            element.appendChild(div);
 
             if (this.item1) {
-                document.querySelector(`#d${day}-item1`).classList.add('green')
+                document.querySelector(`#d${day}-item1`).classList.add('green');
             } else {
-                document.querySelector(`#d${day}-item1`).classList.add('red')
+                document.querySelector(`#d${day}-item1`).classList.add('red');
             }
 
             if (this.item2) {
-                document.querySelector(`#d${day}-item2`).classList.add('green')
+                document.querySelector(`#d${day}-item2`).classList.add('green');
             } else {
-                document.querySelector(`#d${day}-item2`).classList.add('red')
+                document.querySelector(`#d${day}-item2`).classList.add('red');
             }
 
             if (this.item3) {
-                document.querySelector(`#d${day}-item3`).classList.add('green')
+                document.querySelector(`#d${day}-item3`).classList.add('green');
             } else {
-                document.querySelector(`#d${day}-item3`).classList.add('red')
+                document.querySelector(`#d${day}-item3`).classList.add('red');
             }
 
             if (this.item4) {
-                document.querySelector(`#d${day}-item4`).classList.add('green')
+                document.querySelector(`#d${day}-item4`).classList.add('green');
             } else {
-                document.querySelector(`#d${day}-item4`).classList.add('red')
+                document.querySelector(`#d${day}-item4`).classList.add('red');
             }
 
             if (this.item5) {
-                document.querySelector(`#d${day}-item5`).classList.add('green')
+                document.querySelector(`#d${day}-item5`).classList.add('green');
             } else {
-                document.querySelector(`#d${day}-item5`).classList.add('red')
+                document.querySelector(`#d${day}-item5`).classList.add('red');
             }
 
             if (this.item6) {
-                document.querySelector(`#d${day}-item6`).classList.add('green')
+                document.querySelector(`#d${day}-item6`).classList.add('green');
             } else {
-                document.querySelector(`#d${day}-item6`).classList.add('red')
+                document.querySelector(`#d${day}-item6`).classList.add('red');
             }
 
             if (this.item7) {
-                document.querySelector(`#d${day}-item7`).classList.add('green')
+                document.querySelector(`#d${day}-item7`).classList.add('green');
             } else {
-                document.querySelector(`#d${day}-item7`).classList.add('red')
+                document.querySelector(`#d${day}-item7`).classList.add('red');
             }
 
             if (this.item8) {
-                document.querySelector(`#d${day}-item8`).classList.add('green')
+                document.querySelector(`#d${day}-item8`).classList.add('green');
             } else {
-                document.querySelector(`#d${day}-item8`).classList.add('red')
+                document.querySelector(`#d${day}-item8`).classList.add('red');
             }
 
             if (this.item9) {
-                document.querySelector(`#d${day}-item9`).classList.add('green')
+                document.querySelector(`#d${day}-item9`).classList.add('green');
             } else {
-                document.querySelector(`#d${day}-item9`).classList.add('red')
+                document.querySelector(`#d${day}-item9`).classList.add('red');
             }
             
         }
