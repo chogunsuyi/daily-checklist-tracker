@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.day {
+    display: flex;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.day span {
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.item {
+    height: 100px;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+
+    flex: 1
+}
+
+.red {
+    background-color: #d00;
+}
+
+.green {
+    background-color: #008000;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
