@@ -192,16 +192,22 @@ class Day {
 
 
 
+/*
+Enter/Update Data Here
+(Example below can be deleted):
+*/
 
-// 7/18/2023
-progressLog.push(new Day(1, true, true, true, true, true, true, true, true, true));
+    // 7/18/2023
+    progressLog.push(new Day(1, true, true, true, true, true, true, true, true, true));
 
-// 7/19/2023
-progressLog.push(new Day(2, true, false, true, false, true, false, true, false, true));
+    // 7/19/2023
+    progressLog.push(new Day(2, true, false, true, false, true, false, true, false, true));
+
+/*
+Example Over
+*/
 
 
-
-
-progressLog.forEach(item => {
-    item.check();
+progressLog.forEach(day => {
+    day.check();
 })
